@@ -1,0 +1,67 @@
+﻿@model IEnumerable<CompanyWeb.Models.Model.Tobbar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mt-5">Tob Bar</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+           MainTitle
+        </th>
+        <th>
+           HourTitle
+        </th>
+        <th>
+            HourExplanation
+        </th>
+        <th>
+           TelTitle
+        </th>
+        <th>
+            TelExplanation
+        </th>
+        <th>
+          MailTitle
+        </th>
+        <th>
+          MailExplanation
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MainTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HourTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HourExplanation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelExplanation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MailTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MailExplanation)
+        </td>
+        <td>
+<a href="/Tobbar/Edit/@item.TobbarId/" class="btn btn-success">Edit</a>
+
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-web/css/all.css">
+    <title>Document</title>
+</hea>
+<script>
+/*var yas=20;
+function yasKontrol(yas){
+ if (yas < 18)
+ {
+   alert("genç");
+ }
+ else if(yas)
+ {
+   alert("yetişkin");
+ }
+}
+yasKontrol(yas);*/
+/*var i = 2;
+while(i<10){
+  alert(i)
+  i=i+2;
+}*/
+/*for(var i = 1; i <5; i++){
+  alert(i)
+}*/
+/*var sayi1 = 20, sayi2=30;
+var toplam = topla(sayi1, sayi2);
+alert(toplam);*/
+/*var isimler = [];//////////////////////////////////////////////////////////////
+function pushMetoduKullanimi(){
+  isimler.push("mehmet");
+  isimler.push("kerem");
+}
+function diziElemanlariniGoster(){
+  for(var i= 0; i< isimler.length;i++) {
+    alert (isimler[i]);
+  }
+}*/
+alert("max : "+ Math.max(4,15,3,11,2));
+alert("min : "+ Math.min(4,15,3,11,2));
+var sayilar=[4,15,3,11,2]
+
+for (var i = 0; i < sayilar.length; i++) {
+  if (sayilar[i]>max ) {
+    const max = sayilar[i];
+  }
+}
+alert("max"+ max);
+ </script> 
+
+<div class="row">
+  <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+          <div class="ibox-title">
+              <h5>Banka İşlemleri</h5> <span class="label label-primary">PRB+</span>
+          </div>
+          <div class="ibox-content">
+              <div>
+                  <div class="alert alert-success" id="success-alert" style="display:none">
+                      <button type="button" class="close" data-dismiss="alert">x</button>
+                      <strong>Mesaj! </strong> Kayıt İşlemi Başarılı.
+                  </div>
+              </div>
+              <div>
+                  <button type="button" class="btn btn-info btn-icon-split" data-toggle="modal" data-target="#myModal" onclick="clearTextBox()">
+                      <span class="icon text-white-50">
+                          <i class="fa fa-plus"></i>
+                      </span>
+                      <span class="text">Kayıt Ekleme</span>
+                  </button>
+              </div>
+              <div>
+                  <div class="table-responsive">
+                      <table class="table table-bordered" id="dataTables" width="100%" cellspacing="0">
+                          <thead>
+                              <tr>
+                                  <th>Logo</th>
+                                  <th>Banka</th>
+                                  <th>Kod</th>
+                                  <th>Düzenle</th>
+                                  <th>Sil</th>
+                              </tr>
+                          </thead>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content animated bounceInRight">
+          <div class="modal-header">
+              <h5 class="modal-title">Tanımlama ve GÜncelleme Ekranı</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="form-group">
+                  <input type="text" class="form-control" id="ID" placeholder="0" disabled="disabled" style="display: none" />
+              </div>
+              <div class="form-group col-lg-12">
+                  <label for="Names">Banka</label>
+                  <input type="text" class="form-control" id="Names" placeholder="Banka" />
+              </div>
+              <div class="form-group col-lg-12">
+                  <label for="Code">Kod</label>
+                  <input type="text" class="form-control" id="Code" placeholder="Kod" />
+              </div>
+              <div class="form-group col-lg-12">
+                  <label for="Logo">Logo</label>
+                  <input type="text" class="form-control" id="Logo" placeholder="Logo" />
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary mb-1" id="btnAdd" onclick="return Add();">Kaydet</button>
+              <button type="button" class="btn btn-outline-success mb-1" id="btnUpdate" style="display:none;" onclick="Update();">Güncelle</button>
+              <button type="button" class="btn btn-outline-danger mb-1" data-dismiss="modal">Kapat</button>
+          </div>
+      </div>
+  </div>
+</div>
+<script src="~/AppJS/BankJS.js"></script>
+
+</body>
+</html>

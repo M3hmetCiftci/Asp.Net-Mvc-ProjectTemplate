@@ -1,0 +1,26 @@
+﻿@model IEnumerable<CompanyWeb.Models.Model.Admin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mt-5">New User</h2>
+
+<a href="/NewUser/Create/" class="btn btn-outline-secondary">Create</a>
+<table class="table">
+    <tr>
+        <th>Email</th>
+        <th>Passvord</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Email</td>
+            <td>@item.Password</td>
+            <td><a href="/NewUser/Delete/@item.AdminId" class="btn btn-danger">Delete</a></td>
+        </tr>
+    }
+</table>
+
+

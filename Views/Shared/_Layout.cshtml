@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="/Content/lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="/Content/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/Content/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/Content/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar Start -->
+@{ Html.RenderAction("TopBarPartial", "Home");}
+    <!-- Top Bar End -->
+    <!-- Nav Bar Start -->
+    <div class="nav-bar">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <a href="/Home/Index/" class="navbar-brand">MENU</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto">
+                        <a href="/Home/Index/" class="nav-item nav-link active">Home</a>
+                        <a href="/Home/About/" class="nav-item nav-link">About</a>
+                        <a href="/Home/Service/" class="nav-item nav-link">Service</a>
+                        <a href="/Home/Price/" class="nav-item nav-link">Price</a>
+                        <a href="/Home/Blog/" class="nav-item nav-link">Blog</a>
+                    
+                        <a href="/Home/Contact/" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="ml-auto">
+                        <a class="btn btn-custom" href="#">Get Appointment</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+    @RenderBody()
+    <!-- Footer Start -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-contact">
+                        <h2>Get In Touch</h2>
+                        <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+                        <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope"></i>info@example.com</p>
+                        <div class="footer-social">
+                            <a class="btn" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-link">
+                        <h2>Popular Links</h2>
+                        <a href="">About Us</a>
+                        <a href="">Contact Us</a>
+                        <a href="">Our Service</a>
+                        <a href="">Service Points</a>
+                        <a href="">Pricing Plan</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-link">
+                        <h2>Useful Links</h2>
+                        <a href="">Terms of use</a>
+                        <a href="">Privacy policy</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help</a>
+                        <a href="">FQAs</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-newsletter">
+                        <h2>Newsletter</h2>
+                        <form>
+                            <input class="form-control" placeholder="Full Name">
+                            <input class="form-control" placeholder="Email">
+                            <button class="btn btn-custom">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <!-- Footer End -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/Content/lib/easing/easing.min.js"></script>
+    <script src="/Content/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/Content/lib/waypoints/waypoints.min.js"></script>
+    <script src="/Content/lib/counterup/counterup.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="/Content/mail/jqBootstrapValidation.min.js"></script>
+    <script src="/Content/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/Content/js/main.js"></script>
+</body>
+</html>

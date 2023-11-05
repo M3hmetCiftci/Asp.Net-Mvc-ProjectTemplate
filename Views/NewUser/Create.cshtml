@@ -1,0 +1,23 @@
+﻿@model CompanyWeb.Models.Model.Admin
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>User</h2>
+<br />
+@using (Html.BeginForm("Create", "NewUser", FormMethod.Post, new { enctype = "Multipart/form-data" }))
+{
+        <div class="form-group">
+            <label for="Email">
+                <input type="text" name="Email" id="Email" required placeholder="Email" class="form-control" />
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="Password">
+                <input type="text" name="Password" id="Password" required placeholder="Password" class="form-control" />
+            </label>
+        </div>
+        <input class="btn btn-success" type="submit" value="Save" />
+
+        }
+

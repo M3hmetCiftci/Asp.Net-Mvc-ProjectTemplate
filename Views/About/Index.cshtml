@@ -1,0 +1,36 @@
+﻿@model IEnumerable<CompanyWeb.Models.Model.About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2 class="mt-5">About</h2>
+<table class="table">
+    <tr>
+        <th>Title Red</th>
+        <th>TitleWhite</th>
+        <th>Img</th>
+        <th>Tickt1</th>
+        <th>Tickt2</th>
+        <th>Tickt3</th>
+        <th>Tickt4</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.TitleRed</td>
+    <td>@item.TitleWhite</td>
+    <td><img src="@item.ImgURL" width="100" height="100" class="rounded"/></td>
+    <td>@item.Tickt1</td>
+    <td>@item.Tickt2</td>
+    <td>@item.Tickt3</td>
+    <td>@item.Tickt4</td>
+    <td><a href="/About/Edit/@item.AboutId" class="btn btn-success">Edit</a></td>
+</tr>
+    }
+
+</table>
+
